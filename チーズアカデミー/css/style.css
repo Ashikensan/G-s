@@ -1,0 +1,316 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;/* 16px × 62.5% = 10px */
+    color: black;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+body{
+    color: #222222;
+    font-size: 1.6rem;
+    background-color: #fafafa;
+    width: 1200px;
+    margin: auto;
+}
+a{
+    text-decoration: none; /*aタグの下線を削除する*/
+    color: #222222;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.text-center{
+    text-align: center;
+}
+/*--------- header -----------*/
+.header_img{
+    margin: 10px 75px 10px 20px;
+}
+
+.nav-list{
+    display: flex;
+    font-size: 2.1rem;
+    justify-content: flex-start;
+}
+.nav-item{
+    margin: 0 0 0 50px; 
+}
+/*--------- トップ画像 -----------*/
+.box{
+    position: relative;
+}
+.center_top{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 3.6rem;
+    transform: translate3d(-50%,-50%,0);
+}
+.center_bottom{
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    font-size: 1.7rem;
+    letter-spacing: 0.5em;
+    color: white;
+}
+/*--------- ABOUT -----------*/
+.text_cheese{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+.profile_wrap{
+    padding: 60px 0;
+}
+.about_img{
+    margin: 80px 0 0;
+}
+.about_1{
+    display: flex;
+}
+.text_cheese_about{
+    text-align: center;
+    line-height: 1.4;
+}
+.cheese_about{
+    margin: 0 0 40px 0;  
+}
+.cheese_about__{
+    margin: 0 0 10px 0;
+}
+.profile_about{
+    margin: 0 0 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;  
+}
+.text{
+    width: 660px;
+    margin: auto;
+}
+/*--------- COURSE -----------*/
+.profile_course{
+    margin: 0 0 30px;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+.course_{
+    margin: 0 0 10px 0;
+}
+.course__{
+    margin-bottom: 60px;
+}
+.course_wrapper{
+    display: flex;  
+}
+.course_text{
+    background-color: rgb(246, 243, 243);
+    width: 550px;
+    padding: 70px 50px 70px 50px;
+    line-height: 2;
+}
+.course_text1{
+    background-color: rgb(246, 243, 243);
+    width: 550px;
+    padding: 70px 0px 70px 120px;
+    line-height: 2;
+}
+
+.course_01{
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding: 0 0 40px 0;
+}
+.course_02{
+    font-weight: bold;
+    font-size: 2.4rem;
+    padding: 0 0 40px 0;
+}
+.course_gazou{
+    max-width: 600px;
+}
+/*--------- NEWS -----------*/
+.news_wrapper{
+    margin: 0 0 60px 0;
+}
+.profile_news{
+    margin: 60px 0 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;
+}
+.profile_news_text{
+    margin: 0 0 60px;
+}
+.btn{
+    display: block;/*--aタグをインラインレベルボックスからブロックレベルボックスへ変更してwidthが使えるようにする  --*/
+    width: 300px;
+    margin: auto;
+    padding: 21px 0;
+    background-color: #ffd61a;
+    color: #fafafa;
+    font-size: 1.8rem;
+    border: #cacaca;
+   /*-- 送信ボタンも同様に変更 --*/
+}
+a[class="btn text-center"]:hover{
+    background-color: rgb(243, 159, 107);
+}
+.news_list{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 960px;
+}
+.news_date{
+    margin: 30px 0 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 300px;
+}
+.news_text{
+    line-height: 2;
+    text-align: left;
+    width: 300px;
+    font-size: 1.4rem;   
+}
+li[class="news_item"]:hover{
+    border: solid 0.5px rgb(243, 159, 107);
+}
+/*--------- Access -----------*/
+.access-wrap{
+    margin: 60px 0 60px 0;
+}
+.wrapper_access{
+    background-color: #f3f3f3;
+    margin: 60px 0 0 0;
+}
+.text-corp{
+    padding: 0 0 60px 0;
+}
+.profile_access{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 60px 0 30px 0;
+}
+.access-list{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.access-title{
+    width: 200px;
+    padding: 0 0 0 190px;
+    margin-right: -45px;
+    height: 26px;
+}
+.access-item{
+    width: 360px;
+    height: 26px;
+    padding: 0 50px 0 0;
+}
+.access-height{
+    margin: 0 0 30px 0;
+}
+
+.access-height02{
+    margin: 0 0 60px 0;
+}
+/*--------- Contact -----------*/
+.contact_wrap{
+    margin: 60px 0 70px 0;
+}
+.contact_item0{
+    margin: 30px 0 0 0;
+}
+.contact_item1{
+    margin: 60px 0 0 0;
+    line-height: 2.5rem;
+}
+.textspace{
+    margin-left: 10px;
+}
+
+.profile_contact{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.form-wrapper{
+    width: 640px;
+    margin: auto;
+}
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    margin: 0 0 30px 0;
+}
+.form-title{
+    width: 160px; 
+}
+.form-title01{
+    padding: 14px 63px 8px 16px;
+    border-top: solid 1px #bfbfbf;
+    border-right: solid 1px #bfbfbf;
+}
+.form-title02{
+    border-bottom: solid 1px #bfbfbf;
+}
+.form-item{
+    width: 328px;
+}
+.form-item02{
+    padding: 8px 63px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px #bfbfbf;
+}
+.form-item03{
+    border-bottom: solid 1px #bfbfbf;
+}
+.from-item03{
+    margin: 0 0 24px 0;
+}
+.aa{
+    border: solid 1px #bfbfbf;
+}
+.form-parts{
+    border: solid 1px #bfbfbf;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type*="radio"]{
+    margin: 0 15px 0 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: solid 1px #bfbfbf;
+    width: 16px;
+    height: 16px;
+    border-radius: 25%;
+    vertical-align: -3px;
+}
+input[type*="radio"]:checked{
+    background-color:#bfbfbf;
+}
+input[type="submit"]:hover{
+    background-color: rgb(243, 159, 107);
+}
+/*--------- footer -----------*/
+.footer{
+    background-color: #707070;
+    padding: 30px 0;
+    margin: 140px 0 0;
+}
+.copyrights{
+    color: #fafafa;
+}

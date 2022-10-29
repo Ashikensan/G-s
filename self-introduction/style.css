@@ -1,0 +1,139 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;/*16px * 62.5% = 10px*/
+}
+
+body{
+    color: rgb(5, 5, 114);  
+    font-size: 2.0rem;
+}
+img{
+    max-width: 100%;
+    margin: auto;
+}
+a{
+    text-decoration: none; /*aタグの下線を削除する*/
+    color: rgb(5, 5, 114); 
+}
+
+/* header */
+.header-wrap{
+    display: flex;
+    align-items: center;
+}
+.header-icon{
+    width: 1500px;
+    text-align: right;
+    padding-right: 30px;
+}
+.site-title{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+    
+}
+.site-item{
+    padding: 0 30px;
+    margin-bottom: 5px;
+    margin-right: 30px;
+}
+
+
+
+/* Mission */
+.wrapper{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+.mission-img{
+    max-width: 1500px;
+    margin: auto;
+}
+.content{
+    font-size: 3.0rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.content1{
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+.article{
+    line-height: 2.0;
+}
+/* why me */
+.wrapper2{
+    background-color: rgb(27, 9, 225);
+    color: aliceblue;
+    padding-bottom: 20px;
+}
+.item{
+    text-align: center;
+
+}
+.item1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+/* About */
+.item2{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+.about-img{
+    border-radius: 82px;
+    margin: 30px;
+
+}
+.item3{
+    width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.item-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.about-wrap{
+    display: flex;
+
+}
+.item-subject{
+    width: 100px;
+    padding: 8px 0;
+    
+}
+.item-subject1{
+    width: 550px;
+    padding: 8px 0;
+}
+.item-subject2{
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+.btn{
+    display: block;/*--aタグをインラインレベルボックスからブロックレベルボックスへ変更してwidthが使えるようにする  --*/
+    width: 150px;
+    margin: auto;
+    padding: 15px 0;
+    background-color: rgb(27, 9, 225);
+    color: #fafafa;
+    font-size: 1.8rem;
+    border: #cacaca;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer{
+    background-color: rgb(27, 9, 225);
+    color: aliceblue;
+    padding: 30px 0;
+    margin: 140px 0 0;
+    text-align: center;
+}

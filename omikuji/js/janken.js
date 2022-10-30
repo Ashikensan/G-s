@@ -1,5 +1,9 @@
 let number = 0; //なぜclickボタンより前にletを設定しなしといけないのか？勝利数をカウント
 
+$("#start").on("click",function(){
+    $("#play-button").get(0).play();
+});
+
 $("#gu_btn").on("click", function(){
 
 //1.乱数を作成する
@@ -13,11 +17,11 @@ let view4 = "";
 
 
 if( random === 0){
-    view1 = "グー";
-    view2 =  '<img src="img/kinopio.jpg" width=200>';
+    view1 = '<img src="img/gu.jpg" alt="グー" width=150>';
+    view2 = '<img src="img/kinopio.jpg" width=200>';
     view3 = "あいこだー！もう一度！";
 }else if( random === 1){
-    view1 = "チョキ";
+    view1 = '<img src="img/choki.jpg" alt="チョキ" width=150>';
     view2 = '<img src="img/mario.jpg" width=200>';
     view3 = "勝ったね！すごい！";
     if(number < 10){ //９回までカウントした時
@@ -28,13 +32,13 @@ if( random === 0){
         }      
     }
 }else if( random === 2){
-    view1 = "パー";
+    view1 = '<img src="img/pa.jpg" alt="パー" width=150>';
     view2 = '<img src="img/mariokanashi.jpg" width=200>';
     view3 = "残念、もう一度チャレンジしてね！";
 }
 
 //3.表示処理
-$("#pc_hands").text(view1);
+$("#pc_hands").html(view1);
 $("#judgement").html(view2).css("text-align","center");
 $("#judge_comment").html(view3).css("text-align","center","color","red");
 $("#judge_comment").html(view3).css("color","red");
@@ -55,11 +59,11 @@ let view3 = "";
 let view4 = "";
 
 if( random === 0){
-    view1 = "チョキ";
+    view1 = '<img src="img/choki.jpg" alt="チョキ" width=150>';
     view2 = '<img src="img/kinopio.jpg" width=200>';
     view3 = "あいこだー！もう一度！";
 }else if( random === 1){
-    view1 = "パー";
+    view1 = '<img src="img/pa.jpg" alt="パー" width=150>';
     view2 = '<img src="img/mario.jpg" width=200>';
     view3 = "勝ったね！すごい！";
     if(number < 10){ //９回までカウントした時
@@ -70,13 +74,13 @@ if( random === 0){
         }      
     }
 }else if( random === 2){
-    view1 = "グー";
+    view1 = '<img src="img/gu.jpg" alt="グー" width=150>';
     view2 = '<img src="img/mariokanashi.jpg" width=200>';
     view3 = "あなたの負けです！";
 }
 
 //3.表示処理
-$("#pc_hands").text(view1);
+$("#pc_hands").html(view1);
 $("#judgement").html(view2).css("text-align","center");
 $("#judge_comment").html(view3).css("text-align","center");
 $("#judge_comment").html(view3).css("color","red");
@@ -96,11 +100,11 @@ let view3 = "";
 let view4 = "";
 
 if( random === 0){
-    view1 = "パー";
+    view1 = '<img src="img/pa.jpg" alt="パー" width=150>';
     view2 = '<img src="img/kinopio.jpg" width=200>';
     view3 = "あいこだー！もう一度！";
 }else if( random === 1){
-    view1 = "グー";
+    view1 = '<img src="img/gu.jpg" alt="グー" width=150>';
     view2 = '<img src="img/mario.jpg" width=200>';
     view3 = "勝ったね！すごい！";
     if(number < 10){ //９回までカウントした時
@@ -111,13 +115,13 @@ if( random === 0){
         }      
     }
 }else if( random === 2){
-    view1 = "チョキ";
+    view1 = '<img src="img/choki.jpg" alt="チョキ" width=150>';
     view2 = '<img src="img/mariokanashi.jpg" width=200>';
     view3 = "あなたの負けです！";
 }
 
 //3.表示処理
-$("#pc_hands").text(view1);
+$("#pc_hands").html(view1);
 $("#judgement").html(view2).css("text-align","center");
 $("#judge_comment").html(view3).css("text-align","center");
 $("#judge_comment").html(view3).css("color","red");

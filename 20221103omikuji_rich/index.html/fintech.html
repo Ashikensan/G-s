@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/20221103omikuji_rich/css/reset.css">
+    <link rel="stylesheet" href="/20221103omikuji_rich/css/fintech.css">
 </head>
 <body>
     
@@ -26,11 +28,65 @@
 <p>授業 <span id="count_num"></span>回</p>
 
     <div id="conversationArea">
-        <p>今日は何をして過ごす？</p>
+        <p id="message">今日は何をして過ごしますか？</p>
     </div>
+
+    <ul>
+        <li>お金を選択 
+            <ul>
+                <li id="kozukai">お小遣いをもらう</li>
+                <li id="otetsudai">家のお手伝いをする</li>
+                <li>YouTubeを配信する</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- <ul>ここから！ -->
+        <li>お金を選択 
+            <ul>
+                <li id="kozukai">お小遣いをもらう</li>
+                <li id="otetsudai">家のお手伝いをする</li>
+                <li>YouTubeを配信する</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>お金を選択 
+            <ul>
+                <li id="kozukai">お小遣いをもらう</li>
+                <li id="otetsudai">家のお手伝いをする</li>
+                <li>YouTubeを配信する</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>お金を選択 
+            <ul>
+                <li id="kozukai">お小遣いをもらう</li>
+                <li id="otetsudai">家のお手伝いをする</li>
+                <li>YouTubeを配信する</li>
+            </ul>
+        </li>
+    </ul>
+    
+
+    
+        <p>お金 <span id="area_money">0</span>円</p>
+        <p>体力 <span id="area_physical">0</span>円</p>
+        <p>知力 <span id="area_intelligence">0</span>円</p>
+        <p>人間力 <span id="area_human">0</span>円</p>
+        <p>借金 <span id="area_debt">0</span>円</p>
+        <p>信用力 <span id="area_credit">0</span>円</p>
+        <p>資産 <span id="area_assets">0</span>円</p>
+        <p>負債 <span id="area_liabilities">0</span>円</p>
+        <p>純資産 <span id="area_netWorth">0</span>円</p>
+
+
+
+
+
     <div>
-        <select class="custum-pull" name="number">
-            <option value="">お金を選択</option>
+        <select id="area" class="custum-pull" name="number">
+            <option value="">お金を選択</option>   
             <option value="one">お小遣いをもらう</option>
             <option value="two">家のお手伝いをする</option>
             <option value="three">YouTubeを配信する</option>
@@ -54,30 +110,11 @@
             <option value="three">G'sに入学する</option>
         </select>
     </div>
+
+
+
+
     
-    <dl>
-        <dt>お金</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>体力</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>知力</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>人間力</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>借金</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>信用力</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-    </dl>
-        <dt>資産</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <p>合計 <span id="sum_num"></span>円</p>
-        <dt>負債</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <dt>純資産</dt>
-        <dd><input type="text" name="text" id="#"></dd>
-        <p>合計 <span id="sum_num"></span>円</p>
-        <p>信用力 <span id="sum_rate"></span>%</p>
     
         <div class="btn_wrapper"><a href="#" id="#" class="scene2_btn">成績表を見る</a></div>
 
@@ -93,5 +130,7 @@
 <div class="btn_wrapper"><a href="#" id="#" class="scene2_btn">スタート画面へ戻る</a></div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/20221103omikuji_rich/js/fintech.js"></script>
 </body>
 </html>

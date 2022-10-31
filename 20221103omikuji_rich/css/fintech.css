@@ -1,0 +1,15 @@
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+
+
+
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+

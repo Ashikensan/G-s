@@ -384,10 +384,35 @@ $("#nyuugaku").on("click", function(){
             $(assets).html(assets_number += ryokouAc[5]);
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
-    }       
+    }    
+    // 関数内のmoney_numberを抽出して、10000円を達成するとボタン押下、投資選択可能としたい   
+    // console.log(money_number)
+    // if( money_number >= 10000){
+    // $("#ryokou").prop('disabled', false);
+    // }
+    //
 });
+console.log(money_number)
+console.log(physical_number)
+console.log(intelligence_number)
+console.log(human_number)
+console.log(debt_number)
+console.log(credit_number)
+console.log(assets_number)
+console.log(liabilities_number)
+console.log(netWorth_number)
 
 
+
+if(money_number >= 10000){
+    
+    alert(1111)
+    
+    // $("#ryokou").prop('disabled', false);
+    }
+
+
+//シーン２（カウント達成時の投資ボタン解除）
 
 
 //シーン３（授業の場面）

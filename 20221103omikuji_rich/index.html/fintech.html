@@ -12,25 +12,24 @@
     
 <!-- シーン1（スタート画面） -->
 <h1></h1>
-<div id="scene1">
+<div class="scene1_back" id="scene1">
     <h1>家で学ぶお金の授業<br>〜Road of the success 〜</h1>
     <div class="btn_wrapper"><a href="#" id="scene2_se_play" class="scene1_btn">授業を受ける</a></div>
 </div>
 
 <!-- シーン2（ゲームの説明画面） -->
-<img src="#" alt="説明をする近未来の子供の画像"> 
-<p>家で学ぶお金の授業へようこそ！この授業では、テキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト>テキストテキストテキストテキストテキストテキストテキストテキストテキスト。授業へ参加するかな？</p>
-<div class="btn_wrapper"><a href="#" id="#" class="scene1_btn">参加しない</a></div>
-<div class="btn_wrapper"><a href="#" id="#" class="scene1_btn">参加する</a></div>
+<div class="scene2">
+    <img src="#" alt="説明をする近未来の子供の画像"> 
+    <p>家で学ぶお金の授業へようこそ！この授業では、テキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト>テキストテキストテキストテキストテキストテキストテキストテキストテキスト。授業へ参加するかな？</p>
+    <div class="btn_wrapper"><a href="#" id="#" class="scene1_btn">参加する</a></div>
+</div>
 
 <!-- シーン３（授業の場面） -->
-    <!-- アクションボタンを押すたび毎にカウントアップする   -->
+<div class="scene3">
 <p>授業 <span id="count_num"></span>時間目</p>
-
     <div id="conversationArea">
         <p id="message">今日の授業は何にしますか？</p>
     </div>
-
     <ul>
         <li>稼ぐを選択 
             <ul>
@@ -40,6 +39,7 @@
             </ul>
         </li>
     </ul>
+    <ul>
         <li>勉強を選択 
             <ul>
                 <li id="shukudai">学校の宿題をする</li>
@@ -69,7 +69,6 @@
             </ul>
         </li>
     </ul>
-
     <p>お金 <span id="area_money">0</span>円</p>
     <p>体力 <span id="area_physical">0</span>円</p>
     <p>知力 <span id="area_intelligence">0</span>円</p>
@@ -79,14 +78,8 @@
     <p>資産 <span id="area_assets">0</span>円</p>
     <p>負債 <span id="area_liabilities">0</span>円</p>
     <p>純資産 <span id="area_netWorth">0</span>円</p>
-
-
-
-
-    
-    
-        <div class="btn_wrapper"><a href="#" id="#" class="scene2_btn">成績表を見る</a></div>
-
+    <div class="btn_wrapper"><a href="#" id="#" class="scene2_btn">成績表を見る</a></div>
+</div>
 <!-- シーン4（成績発表画面） -->
 <!-- 資産〇〇円 -->
 <!-- 負債〇〇円 -->

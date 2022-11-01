@@ -77,7 +77,18 @@ const nyuugakuMessage_2 ="さ"
 let count = 0;
 
 //シーン1（スタート画面）
-
+// シーン1から2への遷移
+$(function() {
+    // 非表示に設定
+    $(".scene1_btn").click(function() {
+    $("#scene1").css("display", "none");
+    $('#scene2_se').get(0).play();
+    });
+    // 表示に設定
+    $(".scene1_btn").click(function() {
+    $("#scene2").css({"display":"block"});
+    });
+});
 
 //シーン２（ゲームの説明画面）
 $("#kozukai").on("click", function(){
@@ -391,7 +402,9 @@ $("#nyuugaku").on("click", function(){
     // $("#ryokou").prop('disabled', false);
     // }
 });
+
 if(money_number >= 10000){
+    console.log('10000');
     $("#invest_item").css("height","100%").css("opacity","1");
 }
 

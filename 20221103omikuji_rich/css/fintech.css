@@ -6,10 +6,15 @@ li{
     cursor: pointer;
 }
 
-
-
 li:hover{
     background: #0066CC;
     color:#fff;
 }
+
+.invest-wrap{
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;    
+}
+
 

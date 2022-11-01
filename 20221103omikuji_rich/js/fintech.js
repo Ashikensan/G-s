@@ -390,27 +390,10 @@ $("#nyuugaku").on("click", function(){
     // if( money_number >= 10000){
     // $("#ryokou").prop('disabled', false);
     // }
-    //
 });
-console.log(money_number)
-console.log(physical_number)
-console.log(intelligence_number)
-console.log(human_number)
-console.log(debt_number)
-console.log(credit_number)
-console.log(assets_number)
-console.log(liabilities_number)
-console.log(netWorth_number)
-
-
-
 if(money_number >= 10000){
-    
-    alert(1111)
-    
-    // $("#ryokou").prop('disabled', false);
-    }
-
+    $("#invest_item").css("height","100%").css("opacity","1");
+}
 
 //シーン２（カウント達成時の投資ボタン解除）
 

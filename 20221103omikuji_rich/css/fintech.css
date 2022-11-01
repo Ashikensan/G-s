@@ -14,14 +14,14 @@ li:hover{
     background-color: #30c8ee;
 }
 
-
-
-
 /* 投資を選択する画面を非表示 */
 .invest-wrap{
     height: 0;
     opacity: 0;
     transition: all .5s ease;    
+}
+#invest{
+    display: none;
 }
 /* シーン２を非表示 */
 /* .scene2{

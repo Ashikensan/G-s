@@ -115,6 +115,11 @@ $("#kozukai").on("click", function(){
             $(netWorth).html(netWorth_number += kozukaiAc[2]);
             $("#count_num").html(count += 1);
     }
+        //お金10,000円を超過した場合に投資を選択する画面を表示
+        if (money_number >= 10000) {
+            $("#invest").css("display", "block");
+            $("#invest_item").css("height", "100%").css("opacity", "1");
+        } 
 });
 $("#otetsudai").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -171,6 +176,11 @@ $("#youtube").on("click", function(){
             $(netWorth).html(netWorth_number += youtubeAc[2]);
             $("#count_num").html(count += 1);
     }
+    //お金10,000円を超過した場合に投資を選択する画面を表示
+    if (money_number >= 10000) {
+        $("#invest").css("display", "block");
+        $("#invest_item").css("height", "100%").css("opacity", "1");
+    } 
 });
 $("#shukudai").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -318,6 +328,9 @@ $("#tasukeru").on("click", function(){
 });
 $("#ryokou").on("click", function(){
     const random = Math.floor(Math.random() * 3);
+    //ボタンを押下した時に確認画面を表示
+    const result = confirm("お金が減るけど…本当に旅に出てみる？");
+    if( result ){
         if(random === 0){
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += ryokouAc[2]);
@@ -345,12 +358,15 @@ $("#ryokou").on("click", function(){
             $(assets).html(assets_number += ryokouAc[5]);
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
-            
+        }  
     }       
 });
 $("#kihu").on("click", function(){
     const random = Math.floor(Math.random() * 3);
-        if(random === 0){4
+    //ボタンを押下した時に確認画面を表示
+    const result = confirm("お金が減るけど…本当に寄付する？");
+    if( result ){
+        if(random === 0){
             $("#message").text(kihuMessage_0);
             $(money).html(money_number += kihuAc[0]);
             $(human).html(human_number += kihuAc[3]);
@@ -365,10 +381,14 @@ $("#kihu").on("click", function(){
             $(money).html(money_number += kihuAc[2]);
             $(human).html(human_number += kihuAc[5]);
             $("#count_num").html(count += 1);
-    }
+        }
+    }   
 });
 $("#nyuugaku").on("click", function(){
     const random = Math.floor(Math.random() * 3);
+    //ボタンを押下した時に確認画面を表示
+    const result = confirm("お金が減るけど…本当にチャレンジする？");
+    if( result ){
         if(random === 0){
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += nyuugakuAc[2]);
@@ -395,18 +415,10 @@ $("#nyuugaku").on("click", function(){
             $(assets).html(assets_number += ryokouAc[5]);
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
-    }    
-    // 関数内のmoney_numberを抽出して、10000円を達成するとボタン押下、投資選択可能としたい   
-    // console.log(money_number)
-    // if( money_number >= 10000){
-    // $("#ryokou").prop('disabled', false);
-    // }
+         } 
+    }       
 });
 
-if(money_number >= 10000){
-    console.log('10000');
-    $("#invest_item").css("height","100%").css("opacity","1");
-}
 
 //シーン２（カウント達成時の投資ボタン解除）
 

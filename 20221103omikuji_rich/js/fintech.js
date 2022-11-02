@@ -328,7 +328,7 @@ $("#tasukeru").on("click", function(){
 });
 $("#ryokou").on("click", function(){
     const random = Math.floor(Math.random() * 3);
-    //ボタンを押下した時に確認画面を表示
+    //ボタンを押下した時に確認画面を表示させるためにconfirm()メソッドを追記
     const result = confirm("お金が減るけど…本当に旅に出てみる？");
     if( result ){
         if(random === 0){
@@ -363,7 +363,7 @@ $("#ryokou").on("click", function(){
 });
 $("#kihu").on("click", function(){
     const random = Math.floor(Math.random() * 3);
-    //ボタンを押下した時に確認画面を表示
+    //ボタンを押下した時に確認画面を表示させるためにconfirm()メソッドを追記
     const result = confirm("お金が減るけど…本当に寄付する？");
     if( result ){
         if(random === 0){
@@ -386,7 +386,7 @@ $("#kihu").on("click", function(){
 });
 $("#nyuugaku").on("click", function(){
     const random = Math.floor(Math.random() * 3);
-    //ボタンを押下した時に確認画面を表示
+    //ボタンを押下した時に確認画面を表示させるためにconfirm()メソッドを追記
     const result = confirm("お金が減るけど…本当にチャレンジする？");
     if( result ){
         if(random === 0){
@@ -419,8 +419,6 @@ $("#nyuugaku").on("click", function(){
     }       
 });
 
-
-//シーン２（カウント達成時の投資ボタン解除）
 
 
 //シーン３（授業の場面）

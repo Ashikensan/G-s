@@ -36,33 +36,33 @@ const kihuAc =[-5000,-7500,-10000,5000,7500,10000];//現金マイナスして他
 const nyuugakuAc =[-10000,-7500,-5000,5000,7500,10000];//現金マイナスして他の資産へ振替え
 
 //1-(4)アクション毎のメッセージ
-const kozukaiMessage_0 ="あ"
-const kozukaiMessage_1 ="か"
-const kozukaiMessage_2 ="さ"
-const otetsudaiMessage_0 ="あ"
-const otetsudaiMessage_1 ="か"
-const otetsudaiMessage_2 ="さ"
-const youtubeMessage_0 ="あ"
-const youtubeMessage_1 ="か"
-const youtubeMessage_2 ="さ"
-const shukudaiMessage_0 ="あ"
-const shukudaiMessage_1 ="か"
-const shukudaiMessage_2 ="さ"
-const jukuMessage_0 ="あ"
-const jukuMessage_1 ="か"
-const jukuMessage_2 ="さ"
-const dokushoMessage_0 ="あ"
-const dokushoMessage_1 ="か"
-const dokushoMessage_2 ="さ"
-const asobuMessage_0 ="あ"
-const asobuMessage_1 ="か"
-const asobuMessage_2 ="さ"
-const okashiMessage_0 ="あ"
-const okashiMessage_1 ="か"
-const okashiMessage_2 ="さ"
-const tasukeruMessage_0 ="あ"
-const tasukeruMessage_1 ="か"
-const tasukeruMessage_2 ="さ"
+const kozukaiMessage_0 ="お小遣いもらえて良かったね!"
+const kozukaiMessage_1 ="いつもより多くのお小遣いがもらえたね!"
+const kozukaiMessage_2 ="たくさんお小遣いもらえたね!新しいチャレンジできそうだね!"
+const otetsudaiMessage_0 ="お手伝いするのは素晴らしい!"
+const otetsudaiMessage_1 ="いつもよりたくさんお手伝いができましたね!"
+const otetsudaiMessage_2 ="今日はたくさんのお手伝いができましたね!ありがとう!"
+const youtubeMessage_0 ="YouTubeチャレンジ!素晴らしい!"
+const youtubeMessage_1 ="YouTubeたくさん頑張りましたね!"
+const youtubeMessage_2 ="プロYouTuberも夢じゃない!?新しいチャレンジができそうだね!"
+const shukudaiMessage_0 ="宿題に取り組めて素晴らしい!"
+const shukudaiMessage_1 ="いつもよりたくさん宿題ができましたね!"
+const shukudaiMessage_2 ="宿題がんばりましたね!どんどん成長してるね!"
+const jukuMessage_0 ="塾の勉強に取り組めて素晴らしい!"
+const jukuMessage_1 ="いつもよりたくさん勉強ができましたね!"
+const jukuMessage_2 ="たくさん勉強できましたね!塾でNo.1になれるよ!"
+const dokushoMessage_0 ="本が読めて良かったね!"
+const dokushoMessage_1 ="いつもよりたくさん本が読めましたね!"
+const dokushoMessage_2 ="本をたくさん買って読むのは君の成長につながるよ!素晴らしい!"
+const asobuMessage_0 ="友達と遊べて良かったね!"
+const asobuMessage_1 ="今日は友達とたくさん遊べましたね!"
+const asobuMessage_2 ="どんどん友達と仲良くなってるね!君はリーダーになれるよ!"
+const okashiMessage_0 ="お菓子は美味しいよね!"
+const okashiMessage_1 ="今日はいつもりたくさんお菓子を買えたね!"
+const okashiMessage_2 ="お菓子の買いすぎには注意しようね!"
+const tasukeruMessage_0 ="困っている人を助けられましたね!"
+const tasukeruMessage_1 ="困っている人を助けてたくさん感謝されましたね!"
+const tasukeruMessage_2 ="主体的に助けられて素晴らしい!君はお友達のお手本だよ!"
 const ryokouMessage_0 ="あ"
 const ryokouMessage_1 ="か"
 const ryokouMessage_2 ="さ"
@@ -114,7 +114,7 @@ $("#kozukai").on("click", function(){
             $(assets).html(assets_number += kozukaiAc[2]);
             $(netWorth).html(netWorth_number += kozukaiAc[2]);
             $("#count_num").html(count += 1);
-    }
+        }
         //お金10,000円を超過した場合に投資を選択する画面を表示
         if (money_number >= 10000) {
             $("#invest").css("display", "block");
@@ -416,9 +416,8 @@ $("#nyuugaku").on("click", function(){
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
          } 
-    }       
+    }  
 });
-
 
 
 //シーン３（授業の場面）

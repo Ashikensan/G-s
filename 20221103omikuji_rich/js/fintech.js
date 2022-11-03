@@ -77,20 +77,52 @@ const nyuugakuMessage_2 ="さ"
 let count = 0;
 
 //シーン1（スタート画面）
+//スタート画面のアニメーション
+$(function(){
+/* アニメーションさせたいクラス */
+var container = $(".txtAnime");
+
+/* アニメーションスピード */
+var speed = 300;
+
+/* テキストの間にスペースを入れます */
+var content = container.html();
+var text = $.trim(content);
+var newHtml = "";
+
+/* スペースで区切ったテキストを、テキストの数だけspanで囲む */
+text.split("").forEach(function(v) {
+   newHtml += '<span>' + v + '</span>';
+});
+
+/* spanで囲んだテキストをHTMLに戻す */
+container.html(newHtml);
+
+/* 1文字ずつ表示 */
+var txtNum = 0;
+container.css({opacity: 1});
+setInterval(function() {
+  container.find('span').eq(txtNum).css({opacity: 1});
+  txtNum++
+}, speed);
+$(".btn_wrapper").fadeIn(1500);
+});
+
 // シーン1から2への遷移
 $(function() {
     // 非表示に設定
     $(".scene1_btn").click(function() {
-    $("#scene1").css("display", "none");
-    $('#scene2_se').get(0).play();
-    });
+    $("#scene1").css("display","none");
     // 表示に設定
-    $(".scene1_btn").click(function() {
-    $("#scene2").css({"display":"block"});
+    $(".scene2").css({"display":"block"});
     });
 });
 
-//シーン２（ゲームの説明画面）
+//シーン2（授業の説明画面）
+
+
+
+//シーン3（授業の画面）
 $("#kozukai").on("click", function(){
     const random = Math.floor(Math.random() * 3);
         if(random === 0){

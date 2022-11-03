@@ -9,6 +9,8 @@ let credit_number = 0;
 let assets_number = 0;
 let liabilities_number = 0;
 let netWorth_number = 0;
+let ok = 0;
+
 
 //1-(2)BSの勘定科目を変数に代える
 const money = "#area_money" 
@@ -63,15 +65,15 @@ const okashiMessage_2 ="お菓子の買いすぎには注意しようね!"
 const tasukeruMessage_0 ="困っている人を助けられましたね!"
 const tasukeruMessage_1 ="困っている人を助けてたくさん感謝されましたね!"
 const tasukeruMessage_2 ="主体的に助けられて素晴らしい!君はお友達のお手本だよ!"
-const ryokouMessage_0 ="あ"
-const ryokouMessage_1 ="か"
-const ryokouMessage_2 ="さ"
-const kihuMessage_0 ="あ"
-const kihuMessage_1 ="か"
-const kihuMessage_2 ="さ"
-const nyuugakuMessage_0 ="あ"
-const nyuugakuMessage_1 ="か"
-const nyuugakuMessage_2 ="さ"
+const ryokouMessage_0 ="初めての旅行!楽しみだね!"
+const ryokouMessage_1 ="どんどん旅行が楽しくなってきたね!良い調子!"
+const ryokouMessage_2 ="旅行はいろんな出会いや経験が得られて最高だね!"
+const kihuMessage_0 ="初めての寄付!素晴らしい!"
+const kihuMessage_1 ="どんどん寄付が楽しくなってきたね!良い調子!"
+const kihuMessage_2 ="Giveの精神が素晴らしい!"
+const nyuugakuMessage_0 ="G'sへ初めての入学!がんばろう!"
+const nyuugakuMessage_1 ="G'sにチャレンジ!どんどん学ぼうね!"
+const nyuugakuMessage_2 ="G'sに入ってGEEKを目指そうー!"
 
 //1-(5)授業の回数をカウントする変数
 let count = 0;
@@ -128,8 +130,6 @@ $(function() {
     });
 });
 
-
-
 //シーン3（授業の画面）
 $("#kozukai").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -140,6 +140,7 @@ $("#kozukai").on("click", function(){
             $(assets).html(assets_number += kozukaiAc[0]);
             $(netWorth).html(netWorth_number += kozukaiAc[0]);
             $("#count_num").html(count += 1);
+            ok = kozukaiAc[0]
         }else if(random === 1){
             $("#message").text(kozukaiMessage_1);
             $(money).html(money_number += kozukaiAc[1]);
@@ -147,6 +148,7 @@ $("#kozukai").on("click", function(){
             $(assets).html(assets_number += kozukaiAc[1]);
             $(netWorth).html(netWorth_number += kozukaiAc[1]);
             $("#count_num").html(count += 1);
+            ok = kozukaiAc[1]
         }else{
             $("#message").text(kozukaiMessage_2);
             $(money).html(money_number += kozukaiAc[2]);
@@ -154,9 +156,12 @@ $("#kozukai").on("click", function(){
             $(assets).html(assets_number += kozukaiAc[2]);
             $(netWorth).html(netWorth_number += kozukaiAc[2]);
             $("#count_num").html(count += 1);
+            ok = kozukaiAc[2]
         }
+        alert(ok + "円増えたよ！")
         //お金10,000円を超過した場合に投資を選択する画面を表示
         if (money_number >= 10000) {
+            alert("投資ができるようになったよ！")
             $("#invest").css("display", "block");
             $("#invest_item").css("height", "100%").css("opacity", "1");
         } 
@@ -171,6 +176,7 @@ $("#otetsudai").on("click", function(){
             $(assets).html(assets_number += otetsudaiAc[1]);
             $(netWorth).html(netWorth_number += otetsudaiAc[1]);
             $("#count_num").html(count += 1);
+            ok = otetsudaiAc[0]
         }else if(random === 1){
             $("#message").text(otetsudaiMessage_1);
             $(physical).html(physical_number += otetsudaiAc[1]);
@@ -179,6 +185,7 @@ $("#otetsudai").on("click", function(){
             $(assets).html(assets_number += otetsudaiAc[3]);
             $(netWorth).html(netWorth_number += otetsudaiAc[3]);
             $("#count_num").html(count += 1);
+            ok = otetsudaiAc[1]
         }else{
             $("#message").text(otetsudaiMessage_2);
             $(physical).html(physical_number += otetsudaiAc[2]);
@@ -187,7 +194,9 @@ $("#otetsudai").on("click", function(){
             $(assets).html(assets_number += otetsudaiAc[4]);
             $(netWorth).html(netWorth_number += otetsudaiAc[4]);
             $("#count_num").html(count += 1);
-    }
+            ok = otetsudaiAc[2]
+        }
+    alert("体力と人間力がそれぞれ" + ok + "円増えたよ！")
 });
 $("#youtube").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -199,6 +208,7 @@ $("#youtube").on("click", function(){
             $(assets).html(assets_number += youtubeAc[0]);
             $(netWorth).html(netWorth_number += youtubeAc[0]);
             $("#count_num").html(count += 1);
+            ok = youtubeAc[0]
         }else if(random === 1){
             $("#message").text(youtubeMessage_1);
             $(money).html(money_number += youtubeAc[1]);
@@ -207,6 +217,7 @@ $("#youtube").on("click", function(){
             $(assets).html(assets_number += youtubeAc[1]);
             $(netWorth).html(netWorth_number += youtubeAc[1]);
             $("#count_num").html(count += 1);
+            ok = youtubeAc[1]
         }else{
             $("#message").text(youtubeMessage_2);
             $(money).html(money_number += youtubeAc[2]);
@@ -215,9 +226,12 @@ $("#youtube").on("click", function(){
             $(assets).html(assets_number += youtubeAc[2]);
             $(netWorth).html(netWorth_number += youtubeAc[2]);
             $("#count_num").html(count += 1);
+            ok = youtubeAc[2]
     }
+    alert("お金と知力がそれぞれ" + ok + "円増えたよ！")
     //お金10,000円を超過した場合に投資を選択する画面を表示
     if (money_number >= 10000) {
+        alert("投資ができるようになったよ！")
         $("#invest").css("display", "block");
         $("#invest_item").css("height", "100%").css("opacity", "1");
     } 
@@ -231,6 +245,7 @@ $("#shukudai").on("click", function(){
             $(assets).html(assets_number += shukudaiAc[0]);
             $(netWorth).html(netWorth_number += shukudaiAc[0]);
             $("#count_num").html(count += 1);
+            ok = shukudaiAc[0]
         }else if(random === 1){
             $("#message").text(shukudaiMessage_1);
             $(intelligence).html(intelligence_number += shukudaiAc[1]);
@@ -238,6 +253,7 @@ $("#shukudai").on("click", function(){
             $(assets).html(assets_number += shukudaiAc[1]);
             $(netWorth).html(netWorth_number += shukudaiAc[1]);
             $("#count_num").html(count += 1);
+            ok = shukudaiAc[1]
         }else{
             $("#message").text(shukudaiMessage_2);
             $(intelligence).html(intelligence_number += shukudaiAc[2]);
@@ -245,7 +261,9 @@ $("#shukudai").on("click", function(){
             $(assets).html(assets_number += shukudaiAc[2]);
             $(netWorth).html(netWorth_number += shukudaiAc[2]);
             $("#count_num").html(count += 1);
+            ok = shukudaiAc[2]
     }
+    alert("知力が" + ok + "円増えたよ！")
 });
 $("#juku").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -256,6 +274,7 @@ $("#juku").on("click", function(){
             $(assets).html(assets_number += jukuAc[0]);
             $(netWorth).html(netWorth_number += jukuAc[0]);
             $("#count_num").html(count += 1);
+            ok = jukuAc[0]
         }else if(random === 1){
             $("#message").text(jukuMessage_1);
             $(intelligence).html(intelligence_number += jukuAc[1]);
@@ -263,6 +282,7 @@ $("#juku").on("click", function(){
             $(assets).html(assets_number += jukuAc[1]);
             $(netWorth).html(netWorth_number += jukuAc[1]);
             $("#count_num").html(count += 1);
+            ok = jukuAc[1]
         }else{
             $("#message").text(jukuMessage_2);
             $(intelligence).html(intelligence_number += jukuAc[2]);
@@ -270,7 +290,9 @@ $("#juku").on("click", function(){
             $(assets).html(assets_number += jukuAc[2]);
             $(netWorth).html(netWorth_number += jukuAc[2]);
             $("#count_num").html(count += 1);
+            ok = jukuAc[2]
     }
+    alert("知力が" + ok + "円増えたよ！")
 });
 $("#dokusho").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -280,19 +302,23 @@ $("#dokusho").on("click", function(){
             $(intelligence).html(intelligence_number += dokushoAc[3]);
             $(human).html(human_number += dokushoAc[3]);
             $("#count_num").html(count += 1);
+            ok = dokushoAc[3]
         }else if(random === 1){
             $("#message").text(dokushoMessage_1);
             $(money).html(money_number += dokushoAc[1]);
             $(intelligence).html(intelligence_number += dokushoAc[4]);
             $(human).html(human_number += dokushoAc[4]);
             $("#count_num").html(count += 1);
+            ok = dokushoAc[4]
         }else{
             $("#message").text(dokushoMessage_1);
             $(money).html(money_number += dokushoAc[2]);
             $(intelligence).html(intelligence_number += dokushoAc[5]);
             $(human).html(human_number += dokushoAc[5]);
             $("#count_num").html(count += 1);
+            ok = dokushoAc[5]
     }
+    alert("お金は減ったけど、知力と人間力がそれぞれ" + ok + "円増えたよ！")
 });
 $("#asobu").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -304,24 +330,29 @@ $("#asobu").on("click", function(){
             $(assets).html(assets_number += asobuAc[1]);
             $(netWorth).html(netWorth_number += asobuAc[1]);
             $("#count_num").html(count += 1);
+            ok = asobuAc[0]
         }else if(random === 1){
             $("#message").text(asobuMessage_1);
-            $(physical).html(physical_number += otetsudaiAc[1]);
-            $(human).html(human_number += otetsudaiAc[1]);
-            $(credit).html(credit_number += otetsudaiAc[3]);
-            $(assets).html(assets_number += otetsudaiAc[3]);
-            $(netWorth).html(netWorth_number += otetsudaiAc[3]);
+            $(physical).html(physical_number += asobuAc[1]);
+            $(human).html(human_number += asobuAc[1]);
+            $(credit).html(credit_number += asobuAc[3]);
+            $(assets).html(assets_number += asobuAc[3]);
+            $(netWorth).html(netWorth_number += asobuAc[3]);
             $("#count_num").html(count += 1);
+            ok = asobuAc[1]
         }else{
             $("#message").text(asobuMessage_2);
-            $(physical).html(physical_number += otetsudaiAc[2]);
-            $(human).html(human_number += otetsudaiAc[2]);
-            $(credit).html(credit_number += otetsudaiAc[4]);
-            $(assets).html(assets_number += otetsudaiAc[4]);
-            $(netWorth).html(netWorth_number += otetsudaiAc[4]);
+            $(physical).html(physical_number += asobuAc[2]);
+            $(human).html(human_number += asobuAc[2]);
+            $(credit).html(credit_number += asobuAc[4]);
+            $(assets).html(assets_number += asobuAc[4]);
+            $(netWorth).html(netWorth_number += asobuAc[4]);
             $("#count_num").html(count += 1);
+            ok = asobuAc[2]
     }
+    alert("体力と人間力がそれぞれ" + ok + "円増えたよ！")
 });
+
 $("#okashi").on("click", function(){
     const random = Math.floor(Math.random() * 3);
         if(random === 0){
@@ -329,18 +360,23 @@ $("#okashi").on("click", function(){
             $(money).html(money_number += okashiAc[0]);
             $(physical).html(physical_number += okashiAc[3]);
             $("#count_num").html(count += 1);
+            ok = okashiAc[3]
         }else if(random === 1){
             $("#message").text(okashiMessage_0);
             $(money).html(money_number += okashiAc[1]);
             $(physical).html(physical_number += okashiAc[4]);
             $("#count_num").html(count += 1);
+            ok = okashiAc[4]
         }else{
             $("#message").text(okashiMessage_0);
             $(money).html(money_number += okashiAc[2]);
             $(physical).html(physical_number += okashiAc[5]);
             $("#count_num").html(count += 1);
+            ok = okashiAc[5]
     }
+    alert("お金は減ったけど、体力が" + ok + "円増えたよ！")
 });
+
 $("#tasukeru").on("click", function(){
     const random = Math.floor(Math.random() * 3);
         if(random === 0){
@@ -350,6 +386,7 @@ $("#tasukeru").on("click", function(){
             $(assets).html(assets_number += tasukeruAc[0]);
             $(netWorth).html(netWorth_number += tasukeruAc[0]);
             $("#count_num").html(count += 1);
+            ok = tasukeruAc[0]
         }else if(random === 1){
             $("#message").text(tasukeruMessage_1);
             $(human).html(human_number += tasukeruAc[1]);
@@ -357,14 +394,17 @@ $("#tasukeru").on("click", function(){
             $(assets).html(assets_number += tasukeruAc[1]);
             $(netWorth).html(netWorth_number += tasukeruAc[1]);
             $("#count_num").html(count += 1);
+            ok = tasukeruAc[1]
         }else{
             $("#message").text(tasukeruMessage_2);
             $(human).html(human_number += tasukeruAc[2]);
             $(credit).html(credit_number += tasukeruAc[2]);
             $(assets).html(assets_number += tasukeruAc[2]);
             $(netWorth).html(netWorth_number += tasukeruAc[2]);
-            $("#count_num").html(count += 1);   
-    }       
+            $("#count_num").html(count += 1);
+            ok = tasukeruAc[2]   
+    }
+    alert("人間力が" + ok + "円増えたよ！")
 });
 $("#ryokou").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -380,6 +420,7 @@ $("#ryokou").on("click", function(){
             $(assets).html(assets_number += ryokouAc[3]);
             $(liabilities).html(liabilities_number += ryokouAc[3]);
             $("#count_num").html(count += 1);
+            ok = ryokouAc[3]
         }else if(random === 1){
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += ryokouAc[1]);
@@ -389,6 +430,7 @@ $("#ryokou").on("click", function(){
             $(assets).html(assets_number += ryokouAc[4]);
             $(liabilities).html(liabilities_number += ryokouAc[4]);
             $("#count_num").html(count += 1);
+            ok = ryokouAc[4]
         }else{
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += ryokouAc[0]);
@@ -398,8 +440,10 @@ $("#ryokou").on("click", function(){
             $(assets).html(assets_number += ryokouAc[5]);
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
-        }  
-    }       
+            ok = ryokouAc[5]
+        }
+    }
+    alert("お金は減るし借金が増えたけど、知力と人間力がそれぞれ" + ok + "円増えたよ！")       
 });
 $("#kihu").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -411,18 +455,22 @@ $("#kihu").on("click", function(){
             $(money).html(money_number += kihuAc[0]);
             $(human).html(human_number += kihuAc[3]);
             $("#count_num").html(count += 1);
+            ok = kihuAc[3]
         }else if(random === 1){
             $("#message").text(kihuMessage_0);
             $(money).html(money_number += kihuAc[1]);
             $(human).html(human_number += kihuAc[4]);
             $("#count_num").html(count += 1);
+            ok = kihuAc[4]
         }else{
             $("#message").text(kihuMessage_0);
             $(money).html(money_number += kihuAc[2]);
             $(human).html(human_number += kihuAc[5]);
             $("#count_num").html(count += 1);
+            ok = kihuAc[5]
         }
-    }   
+    }
+    alert("お金は減ったけど、人間力が" + ok + "円増えたよ！")    
 });
 $("#nyuugaku").on("click", function(){
     const random = Math.floor(Math.random() * 3);
@@ -437,6 +485,7 @@ $("#nyuugaku").on("click", function(){
             $(assets).html(assets_number += nyuugakuAc[3]);
             $(liabilities).html(liabilities_number += nyuugakuAc[3]);
             $("#count_num").html(count += 1);
+            ok = nyuugakuAc[3]
         }else if(random === 1){
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += ryokouAc[1]);
@@ -446,6 +495,7 @@ $("#nyuugaku").on("click", function(){
             $(assets).html(assets_number += ryokouAc[4]);
             $(liabilities).html(liabilities_number += ryokouAc[4]);
             $("#count_num").html(count += 1);
+            ok = nyuugakuAc[4]
         }else{
             $("#message").text(ryokouMessage_0);
             $(money).html(money_number += ryokouAc[0]);
@@ -455,10 +505,11 @@ $("#nyuugaku").on("click", function(){
             $(assets).html(assets_number += ryokouAc[5]);
             $(liabilities).html(liabilities_number += ryokouAc[5]);
             $("#count_num").html(count += 1);
+            ok = nyuugakuAc[5]
          } 
     }  
+    alert("お金は減るし借金が増えたけど、知力と人間力がそれぞれ" + ok + "円増えたよ！")
 });
-
 
 //シーン３（授業の場面）
 

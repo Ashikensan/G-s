@@ -109,22 +109,44 @@ a.btn_06-2 {
 }
 
 /* シーン2 */
+.scene-wrap{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.scene-container{
+    display: flex;
+    vertical-align:middle; /*中央揃え*/
+
+}
 .scene-message2{
     text-align: left;
     margin: auto;
     margin: 10px;
-    border: 2px solid #696969 ; 
-    line-height: 1.4;
-    font-size: 1.3rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
 }
 .message2a{
     font-weight: bold;
+    text-align: center;
+    font-size: 2.0rem;
+    margin-left: 100px;
+    margin-bottom: 20px;
 }
 .message2b{
     font-weight: bold;
     color: red;
 }
+.scene2_item{
+    font-size: 2.0rem;
+    text-decoration: none;
+
+}
 /* シーン3 */
+.scene3_head{
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+}
 li{
     list-style-type:none;
     border: 1px solid #666;
@@ -138,8 +160,7 @@ li:hover{
 }
 .main-container{
     display: flex;
-    width: fit-content;
-	margin: 0 auto;
+    margin: 20px 0 0 20px;
 }
 .container{
     display: flex;
@@ -173,6 +194,7 @@ li:hover{
     border: 2px solid  rgb(203, 203, 3); 
     background-color: rgb(247, 247, 92);
     font-weight: bold;
+    width: 28%;
 }
 .item4{
     font-size: 1.6rem;
@@ -188,11 +210,19 @@ li:hover{
     background-color: rgb(149, 149, 244);
     font-weight: bold;
 }
-
 .container2{
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
+    /* justify-content: space-between; */
+}
+.scene3-title{
+    margin-top: 5px 0 0 0;
+}
+
+.scene3-comment{
+    padding: 5px 0;
+    margin-left: 5px;
 }
 
 /* シーン２を非表示 */

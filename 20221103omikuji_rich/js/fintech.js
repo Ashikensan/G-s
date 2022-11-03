@@ -118,7 +118,15 @@ $(function() {
     });
 });
 
-//シーン2（授業の説明画面）
+//シーン2から3への遷移
+$(function() {
+    // 非表示に設定
+    $(".scene2_btn").click(function() {
+    $(".scene2").css("display","none");
+    // 表示に設定
+    $(".scene3").css({"display":"block"});
+    });
+});
 
 
 

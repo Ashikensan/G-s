@@ -108,6 +108,23 @@ a.btn_06-2 {
     }
 }
 
+/* シーン2 */
+.scene-message2{
+    text-align: left;
+    margin: auto;
+    margin: 10px;
+    border: 2px solid #696969 ; 
+    line-height: 1.4;
+    font-size: 1.3rem;
+}
+.message2a{
+    font-weight: bold;
+}
+.message2b{
+    font-weight: bold;
+    color: red;
+}
+/* シーン3 */
 li{
     list-style-type:none;
     border: 1px solid #666;
@@ -119,9 +136,64 @@ li:hover{
     background: #30c8ee;
     color:#fff;
 }
+.main-container{
+    display: flex;
+    width: fit-content;
+	margin: 0 auto;
+}
+.container{
+    display: flex;
+    margin-top: 32px;
+    margin-left: 20px;
+}
+.item{
+    font-size: 1.6rem;
+    padding: 20px 30px;
+    border: 2px solid  rgb(203, 203, 3); 
+    background-color: rgb(247, 247, 92);
+    font-weight: bold;
+}
+.item1{
+    font-size: 1.6rem;
+    padding: 50px 30px;
+    border: 2px solid grey; 
+    background-color: rgb(236, 232, 232);
+    font-weight: bold;
+}
+.item2{
+    font-size: 1.6rem;
+    padding: 50px 30px;
+    border: 2px solid  rgb(4, 4, 250); 
+    background-color: rgb(149, 149, 244);
+    font-weight: bold;
+}
+.item3{
+    font-size: 1.6rem;
+    padding: 20px 30px;
+    border: 2px solid  rgb(203, 203, 3); 
+    background-color: rgb(247, 247, 92);
+    font-weight: bold;
+}
+.item4{
+    font-size: 1.6rem;
+    padding: 20px 30px;
+    border: 2px solid grey; 
+    background-color: rgb(236, 232, 232);
+    font-weight: bold;
+}
+.item5{
+    font-size: 1.6rem;
+    padding: 20px 30px;
+    border: 2px solid  rgb(4, 4, 250); 
+    background-color: rgb(149, 149, 244);
+    font-weight: bold;
+}
 
-
-
+.container2{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
 /* シーン２を非表示 */
 .scene2{

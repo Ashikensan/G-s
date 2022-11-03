@@ -30,70 +30,100 @@
 
 <!-- シーン2（ゲームの説明画面） -->
 <div class="scene2">
-    <img src="#" alt="説明をする近未来の子供の画像"> 
-    <p>家で学ぶお金の授業へようこそ！この授業では、テキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト>テキストテキストテキストテキストテキストテキストテキストテキストテキスト。授業へ参加するかな？</p>
-    <div class="btn_wrapper"><a href="#" id="#" class="scene1_btn">参加する</a></div>
+    <p class="scene-message2">
+        <span class="message2a">\ \お家のお父さん、お母さんへのメッセージ/ /</span><br>
+        家で学ぶお金の授業へようこそ！このゲームは、会社の事業活動をヒントにした子供向け金融教育ゲームです。<br>
+        会社では、事業活動を貸借対照表、損益計算書などの決算書で表現しています。<br>
+        貸借対照表で示される資産、負債、純資産は、日々の事業活動の結果が数字として示されます。<br>
+        その数字を見れば、どこからお金を調達して、何に使っているのかを知ることができ、健全な事業運営を知るヒントとなります。<br>
+        そこで、この考えを子供向けに転用したのがこのゲームです！<br>
+        子供たちは普段、お手伝いをしたり、友達と遊んだり、時にお小遣いをもらって好きなお菓子や本を買って楽しんでいます。<br>
+        その何気ない行動を貸借対照表に示すことで<span class="message2b">「どのような行動をすると、どんな力が身につくのか」</span>を考える力が育まれます。<br>
+        目に見えるお金だけが資産ではありません。<br>
+        目に見えない資産（無形資産）もバランスよく身につけることも大切です。<br>
+        このゲームが、子供たちにとって金融の学びとなり、成長の一助になれば嬉しいです。<br>
+    </p>
+        <img src="../img/2.jpg" alt="ブタの画像" width=250 height=250> 
+            <div class="btn_wrapper">
+                <a href="#" id="#" class="scene2_btn">参加する</a>
+            </div>
 </div>
 
 <!-- シーン３（授業の場面） -->
 <div class="scene3">
-    <p>授業 <span id="count_num"></span>時間目</p>
-        <div id="conversationArea">
-            <p id="message">今日の授業は何にしますか？</p>
+    <div class="main-container">
+        <div>
+            <p>授業 <span id="count_num"></span>時間目</p>
+                <div id="conversationArea">
+                    <p id="message">今日の授業は何にしますか？</p>
+                </div>
+            <ul>
+                <li>
+                    稼ぐを選択 
+                    <ul>
+                        <li id="kozukai">お小遣いをもらう</li>
+                        <li id="otetsudai">家のお手伝いをする</li>
+                        <li id="youtube">YouTubeを配信する</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    勉強を選択 
+                    <ul>
+                        <li id="shukudai">学校の宿題をする</li>
+                        <li id="juku">塾の勉強をする</li>
+                        <li id="dokusho">本を買って読む</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    外出を選択 
+                    <ul>
+                        <li id="asobu">友達と遊ぶ</li>
+                        <li id="okashi">お菓子を買いに行く</li>
+                        <li id="tasukeru">困っている人を助ける</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="invest">
+                <li>
+                    投資を選択 
+                    <ul class="invest-wrap invest-wrap-active" id="invest_item">
+                        <!-- <button disabled>海外へ旅行する</button>
+                        <button disabled id="ryokou_btn"><li id="ryokou">海外へ旅行する</li></button> -->
+                        <!-- <li id="ryokou" disabled>海外へ旅行する</li> -->
+                        <li id="ryokou">海外へ旅行する</li>
+                        <li id="kihu">団体へ寄付する</li>
+                        <li id="nyuugaku">G'sへ入学する</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    <ul>
-        <li>
-            稼ぐを選択 
-            <ul>
-                <li id="kozukai">お小遣いをもらう</li>
-                <li id="otetsudai">家のお手伝いをする</li>
-                <li id="youtube">YouTubeを配信する</li>
-            </ul>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            勉強を選択 
-            <ul>
-                <li id="shukudai">学校の宿題をする</li>
-                <li id="juku">塾の勉強をする</li>
-                <li id="dokusho">本を読む</li>
-            </ul>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            外出を選択 
-            <ul>
-                <li id="asobu">友達と遊ぶ</li>
-                <li id="okashi">お菓子を買いに行く</li>
-                <li id="tasukeru">困っている人を助ける</li>
-            </ul>
-        </li>
-    </ul>
-    <ul id="invest">
-        <li>
-            投資を選択 
-            <ul class="invest-wrap invest-wrap-active" id="invest_item">
-                <!-- <button disabled>海外へ旅行する</button>
-                <button disabled id="ryokou_btn"><li id="ryokou">海外へ旅行する</li></button> -->
-                <!-- <li id="ryokou" disabled>海外へ旅行する</li> -->
-                <li id="ryokou">海外へ旅行する</li>
-                <li id="kihu">団体へ寄付する</li>
-                <li id="nyuugaku">G'sへ入学する</li>
-            </ul>
-        </li>
-    </ul>
-
-    <p>お金 <span id="area_money">0</span>円</p>
-    <p>体力 <span id="area_physical">0</span>円</p>
-    <p>知力 <span id="area_intelligence">0</span>円</p>
-    <p>人間力 <span id="area_human">0</span>円</p>
-    <p>借金 <span id="area_debt">0</span>円</p>
-    <p>信用力 <span id="area_credit">0</span>円</p>
-    <p>資産 <span id="area_assets">0</span>円</p>
-    <p>負債 <span id="area_liabilities">0</span>円</p>
-    <p>純資産 <span id="area_netWorth">0</span>円</p>
+        <div>
+            <div class="container">
+                <div>
+                    <p class="item">お金 <span id="area_money">0</span>円</p>
+                    <p class="item">体力 <span id="area_physical">0</span>円</p>
+                    <p class="item">知力 <span id="area_intelligence">0</span>円</p>
+                    <p class="item">人間力 <span id="area_human">0</span>円</p>
+                </div>
+                <div>
+                    <p class="item1">借金 <span id="area_debt">0</span>円</p>
+                    <p class="item2">信用力 <span id="area_credit">0</span>円</p>
+                </div>
+            </div>
+            <!-- <p>合計</p> -->
+            <div class="container2">
+                <p class="item3">資産 <span id="area_assets">0</span>円</p>
+                <div>
+                    <p class="item4">負債 <span id="area_liabilities">0</span>円</p>
+                    <p class="item5">純資産 <span id="area_netWorth">0</span>円</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="btn_wrapper">
             <a href="#" id="#" class="scene2_btn">成績表を見る</a>

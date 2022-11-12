@@ -7,13 +7,17 @@
 <body>
 
 <!-- コンテンツ表示画面 -->
-
-
-
-
-
-
-
+<div>
+    <div>名前<input type="text" id="username"></div>
+    <div>
+        <!-- メッセージ入力欄 -->
+        <textarea id="text" cols="20" rows="5"></textarea>
+        <!-- 送信ボタン -->
+        <button id="send">送信</button>
+    </div>
+    <!-- チャット文字をリスト表示 -->
+    <div id="output"></div>
+</div>
 
 
 <!--/ コンテンツ表示画面 -->
@@ -26,7 +30,61 @@
 
 
 <!-- 以下Firebase -->
+<!-- firebaseからスクリプトをコピーして貼り付け -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA6SoB5fWW_9t7TLPccpXpoFyHKhMnqqoU",
+      authDomain: "gschat-55469.firebaseapp.com",
+      projectId: "gschat-55469",
+      storageBucket: "gschat-55469.appspot.com",
+      messagingSenderId: "80007843059",
+      appId: "1:80007843059:web:7ad397b4651026bdd17b86",
+      measurementId: "G-9PTTWX63L3"
+    };
 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // MSG送受信準備、リアルタイム通信のため
+    let newPostRef = firebase.database().ref();
+    consol.log(newPostRef);
+
+    //送信処理
+    $("#send").on("click", function(){
+        //変数宣言したnewPostRefのfirebaseに送信ボタンを押すと下記をプッシュします！ 
+        newPostRef.push({
+            username : $("#username").val(),
+            text     : $("#text").val()
+        });
+        //送信ボタンを押した後、text欄の文字を空文字にする！
+        $("#text").val("");
+    });
+
+    //送信処理2 エンターボタンを押すと送信
+    $("#text").on("keydown". function(){
+
+    });
+
+    //受信処理
+    newPostRef.on("child_added", function(data){
+        //データを取得する。これで初めて変数にデータを格納できる
+        const v = data.val();
+        //データの中のユニークキーを取得（基準と）する
+        const k = data.key; 
+        const str = '<dl><dt>'+ v.username +'</dt><dd>'+ v.text +'</dd></dl>';
+        $("#output").append(str);
+    });
+
+  </script>
 
 
 

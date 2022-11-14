@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testchat
-    </title>
+    <title>testChat</title>
 </head>
 <body>
 
@@ -69,6 +68,9 @@ onChildAdded(dbRef, function(data){ //dbを参照して、以下を実行しま�
         </div>
     `;
     $("#output").append(h);
+    //表示コメントのスクロールを一番最後に常に表示させる
+    const output = document.getElementById('output');
+    output.scrollTo(0, output.scrollHeight);    
 });
 
 

@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobRich</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+<!-- トップ画面 -->
+<!-- メニュー選択画面 -->
+<!-- 人を選ぶ画面 -->
+<!-- メッセージ画面 -->
+<div id="output" style="overflow: auto;height: 300px;"></div>
+<div>
+    <!-- 「名前：」を消去するためにdisplay:noneを利用（inputタグを削除するとDBでエラーが生じる -->
+    <input style="display:none" type="text" id="uname">
+</div>
+    <textarea id="text" cols="30" rows="10"></textarea>
+    <button id="send">送信</button>
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="module" src="js/chat.js"></script>
 </body>
 </html>

@@ -63,11 +63,15 @@ onChildAdded(dbRef, function(data){ //dbを参照して、以下を実行しま�
     console.log(msg);
     const key = data.key; //DB内のユニークキーを取得
     console.log(key);
+    let now = msg.timestamp;
+    let date = new Date(now); //差分のミリ秒をnewDateに入れる！調べる！一旦入れる。下準備
+    //差分のミリ秒から時刻を割り戻す
+    let dates = date.getFullYear() + "年" + (date.getMonth() +1) + "月" + date.getDate() + "日 " + date.getHours() + "時" + date.getMinutes() + "分"
     let h =`
         <div>
             <p>${msg.uname}</p>
             <p>${msg.text}</p>
-            <p>${msg.timestamp}</p>
+            <p>${dates}</p>
         </div>
     `;
     $("#output").append(h);
@@ -75,14 +79,3 @@ onChildAdded(dbRef, function(data){ //dbを参照して、以下を実行しま�
     const output = document.getElementById('output');
     output.scrollTo(0, output.scrollHeight);    
 });
-
-
-function getTime(){
-    const date = new Date();
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-    return[hour,minute]
-}
-const[ a1,a2 ]= getTime();
-console.log(a1);
-console.log(a2);

@@ -7,12 +7,23 @@
     <title>JobRich</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        img{
+            height: 200px;
+            width : 200px;
+            border: 2px black solid;
+        }
+    </style>
 </head>
 <body>
-<!-- トップ画面 -->
-<!-- メニュー選択画面 -->
-<!-- 人を選ぶ画面 -->
-<!-- メッセージ画面 -->
+    <label>Image Name</label><input type="text" id="namebox" />
+    <label id="extlab"></label><br>
+    <img id="myimg" alt=""><label for="" id="upprogress"></label>
+
+    <button id="selbtn">画像を選ぶ</button>
+    <button id="upbtn">画像をアップロード</button>
+    <button id="downbtn">Retrieve</button>
+
 <div id="output" style="overflow: auto;height: 300px;"></div>
 <div>
     <!-- 「名前：」を消去するためにdisplay:noneを利用（inputタグを削除するとDBでエラーが生じる -->

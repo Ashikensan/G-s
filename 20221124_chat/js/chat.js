@@ -19,12 +19,7 @@ const auth = getAuth();
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-      apiKey: "AIzaSyDGobN-m8O3qtZbdoKkLGuKR3O2Vlswt-Q",
-      authDomain: "dev245-316d1.firebaseapp.com",
-      projectId: "dev245-316d1",
-      storageBucket: "dev245-316d1.appspot.com",
-      messagingSenderId: "211419764397",
-      appId: "1:211419764397:web:e2de0904bcb9d549cd1824"
+    ///削除
     };
 
 // Initialize Firebase

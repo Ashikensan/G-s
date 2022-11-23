@@ -1,3 +1,4 @@
+// 必要なfirebaseライブラリを読み込む
 // Import the functions you need from the SDKs you need
 import { initializeApp } 
 //バージョンを要チェック！
@@ -6,7 +7,16 @@ from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getDatabase, ref, push, set, onChildAdded, remove,onChildRemoved,serverTimestamp} 
 //バージョンを要チェック！
 from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
-// import { updateDoc, serverTimestamp } from "firebase/firestore";
+//auth認証のライブラリを追加
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } 
+from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
+
+//GoogleAuth(認証用)ここから
+const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+const auth = getAuth();
+//GoogleAuth(認証用)ここまで
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
       apiKey: "AIzaSyDGobN-m8O3qtZbdoKkLGuKR3O2Vlswt-Q",
@@ -16,11 +26,13 @@ const firebaseConfig = {
       messagingSenderId: "211419764397",
       appId: "1:211419764397:web:e2de0904bcb9d549cd1824"
     };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // <!-- firebaseのCDNから貼り付け（ここまで） -->
 
-// 追加 //
+const clouddb = getFirestore();
+// firebaseのstorage機能を追加 //
 import{
     getStorage,
     ref as sRef,
@@ -36,7 +48,25 @@ import{
     collection,
     addDoc,
 } from"https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"
-const clouddb = getFirestore();
+
+$("#login").on("click", function () {
+    //Google認証完了の処理
+    signInWithPopup(auth, provider).then((result) => {
+            // Login後のページ遷移
+            location.href = "index.html";  //遷移先次のページ
+            console.log('ログインOK');
+        }).catch((error) => {
+          console.log('ログイン失敗');
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // 
+        });
+    });
 
 // ---------------------------
 let files = [];

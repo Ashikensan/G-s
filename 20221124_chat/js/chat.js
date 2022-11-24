@@ -1,19 +1,24 @@
 // 必要なfirebaseライブラリを読み込む
 // Import the functions you need from the SDKs you need
 //バージョンを要チェック！
-import { initializeApp } 
-from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+import { initializeApp } from 
+"https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 //↓に重要なコードを貼り付ける（RealtimeDatabaseを使えるよう追加でインポートしている）
 //バージョンを要チェック！
-import { getDatabase, ref, push, set, onChildAdded, remove,onChildRemoved,serverTimestamp} 
-from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+import { getDatabase, ref, push, set, onChildAdded, remove,onChildRemoved,serverTimestamp} from
+"https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 //auth認証のライブラリを追加
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } 
-from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from
+"https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    ///削除
+    apiKey: "AIzaSyDGobN-m8O3qtZbdoKkLGuKR3O2Vlswt-Q",
+    authDomain: "dev245-316d1.firebaseapp.com",
+    projectId: "dev245-316d1",
+    storageBucket: "dev245-316d1.appspot.com",
+    messagingSenderId: "211419764397",
+    appId: "1:211419764397:web:e2de0904bcb9d549cd1824"
     };
 
 // Initialize Firebase
@@ -146,7 +151,6 @@ UpBtn.onclick = UploadProcess;
 async function SaveURLtoFirestore(url){
     let name = namebox.value
     let ext = extlab.innerHTML
-
     let ref = doc(clouddb, "ImageLinks/ + name")
 
     await setDoc(ref, {
@@ -175,6 +179,7 @@ const db = getDatabase(app);
 
 //dev245はfirebaseのプロジェクト名。
 const dbRef = ref(db, 'dev245');
+
 //時間を取得
 const timestamp = serverTimestamp();
 
@@ -229,3 +234,4 @@ onChildAdded(dbRef, function(data) { //dbを参照して、以下を実行しま
     const output = document.getElementById('output');
     output.scrollTo(0, output.scrollHeight);    
 });
+
